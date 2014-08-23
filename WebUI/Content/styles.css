@@ -1,0 +1,215 @@
+﻿
+html, body
+{
+    font-family: Arial, Helvetica;
+    font-size: 11px;
+    height: 100%;
+    text-align: center;    
+    background-image: url(Images/background_repeat.jpg);
+    background-repeat: repeat-x;
+}
+
+div#container
+{
+    margin: 0 auto;
+    width: 960px;
+    text-align: left;
+}
+
+DIV#header
+{
+    width: 960px;
+    background-color: White;
+    color: #444;
+    padding: 10px 0px 0px 20px;
+}
+DIV#header DIV.title
+{
+    padding: .2em 0em 0em 0em;
+}
+DIV#navTitle
+{
+    clear: both;
+    height: 23px;
+    width: 320px;
+    background-color: #00458c;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+DIV#navTitle H1
+{
+    color: white;
+    font-weight: normal;
+    font-size: 16px;
+    text-indent: 20px;
+    padding-top: 2px;
+    margin-top: 1px;
+}
+DIV#content
+{
+    float: left;
+    clear: left;
+    padding: 1em 0em;
+}
+DIV#navigation
+{
+    clear: both;
+    height: 31px;
+    background-color: #bfd5ea;
+    border-bottom: solid 1px #00458c;
+}
+
+DIV#noNavigation
+{
+    clear: both;
+    height: 31px;
+}
+
+ul
+{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    z-index: 99999;
+    z-order: 99999;
+}
+ul li
+{
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    position: relative;
+    float: left;
+    z-index: 99999;
+    z-order: 99999;
+}
+li ul
+{
+    display: none;
+    z-index: 1000;
+}
+ul li a
+{
+    display: block;
+    text-decoration: none;
+    color: #00458c;
+    padding: 7px 20px; /*padding: 0.5em 1.5em;*/
+    background: #bfd5ea;
+    margin: 1px 0px;
+    white-space: nowrap;
+}
+#menu ul li a:hover
+{
+    background: #edf3f8;
+    color: #00458c;
+}
+
+#menu ul li a.selected
+{
+    color: #bfd5ea;
+    background-color: #00458c;
+}
+
+#menu ul li a.selected:hover
+{
+    background: #edf3f8;
+    color: #00458c;
+}
+
+
+#menu li:hover ul
+{
+    display: block;
+    position: absolute;
+}
+#menu li:hover li
+{
+    float: none;
+    font-size: 13px;
+}
+#menu li:hover a
+{
+    background: #edf3f8;
+    color: #00458c;
+}
+#menu li:hover li a:hover
+{
+    background: #bfd5ea;
+    color: #00458c;
+}
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+li
+{
+    display: list-item;
+}
+/*..............................................LOGIN STATUS PANEL........................................*/
+
+#statusname
+{
+    color: #00458c;
+    font-size: medium;
+    margin: 5px 25px 0px 5px;
+    text-align: right;
+    float: right;
+    font-weight: bolder;
+}
+
+#statuslogintime
+{
+    color: #4B5457;
+    font-size: small;
+    text-align: right;
+    float: right;
+    margin: 5px 25px 0px 5px;
+}
+
+#statuspendingactions
+{
+    color: #B1283C;
+    font-size: small;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.statusloginlink
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #FFFFFF;
+    background-color: #00458c;
+    border: 0px;
+    height: 20px;
+    width: 50px;
+    cursor: pointer;
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 4px;
+    line-height: 20px;
+}
+
+
+

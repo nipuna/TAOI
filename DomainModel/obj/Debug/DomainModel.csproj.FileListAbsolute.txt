@@ -1,0 +1,6 @@
+D:\DEVELOPMENT\WebApplications\NEXTGEN TECH\WEB PROJECTS\IOTA\IOTA\DomainModel\bin\Debug\DomainModel.dll.config
+D:\DEVELOPMENT\WebApplications\NEXTGEN TECH\WEB PROJECTS\IOTA\IOTA\DomainModel\bin\Debug\DomainModel.dll
+D:\DEVELOPMENT\WebApplications\NEXTGEN TECH\WEB PROJECTS\IOTA\IOTA\DomainModel\bin\Debug\DomainModel.pdb
+D:\DEVELOPMENT\WebApplications\NEXTGEN TECH\WEB PROJECTS\IOTA\IOTA\DomainModel\obj\Debug\ResolveAssemblyReference.cache
+D:\DEVELOPMENT\WebApplications\NEXTGEN TECH\WEB PROJECTS\IOTA\IOTA\DomainModel\obj\Debug\DomainModel.dll
+D:\DEVELOPMENT\WebApplications\NEXTGEN TECH\WEB PROJECTS\IOTA\IOTA\DomainModel\obj\Debug\DomainModel.pdb

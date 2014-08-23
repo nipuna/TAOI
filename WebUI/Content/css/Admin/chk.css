@@ -1,0 +1,18 @@
+body{
+	background-color:#0C0;
+	margin:0px auto;
+}
+#main{
+	height:auto;
+	width:600px;
+	background-color:#000;
+	margin-left:auto;
+	margin-right:auto;
+}
+#header{
+	height:120px;
+	width:550px;
+	float:left;
+	display:block;
+	background-color:#FFF;
+}

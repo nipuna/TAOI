@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1011]D:\PROJECTS\WEB PROJECTS\NextGen_IOTA\Tests\bin\Debug\Tests.dll</TopNode>
+  <SelectedNode>[0-1001]Tests.AdminTests.BrandsControllerTests.List_Presents_Correct_Page_Of_Brands</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1011]D:\PROJECTS\WEB PROJECTS\NextGen_IOTA\Tests\bin\Debug\Tests.dll" Expanded="true" />
+    <Node UniqueName="[0-1012]Tests" Expanded="true" />
+    <Node UniqueName="[0-1013]Tests.AdminTests" Expanded="true" />
+    <Node UniqueName="[0-1000]Tests.AdminTests.BrandsControllerTests" Expanded="true" />
+    <Node UniqueName="[0-1014]Tests.Routing" Expanded="true" />
+    <Node UniqueName="[0-1004]Tests.Routing.InboundRoutingTests" Expanded="true" />
+    <Node UniqueName="[0-1007]Tests.Routing.OutboundRoutingTests" Expanded="true" />
+  </Nodes>
+</VisualState>

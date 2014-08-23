@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IOTAModelStoreContainer" CdmEntityContainer="IOTAEntities">
+    <EntitySetMapping Name="Accessories">
+      <EntityTypeMapping TypeName="IOTAModel.Accessory">
+        <MappingFragment StoreEntitySet="Accessories">
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="RetiredOn" ColumnName="RetiredOn" />
+          <ScalarProperty Name="AcquiredOn" ColumnName="AcquiredOn" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="Provider" ColumnName="Provider" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AdditionalAttributes">
+      <EntityTypeMapping TypeName="IOTAModel.AdditionalAttribute">
+        <MappingFragment StoreEntitySet="AdditionalAttributes">
+          <ScalarProperty Name="DefaultValue" ColumnName="DefaultValue" />
+          <ScalarProperty Name="QuickGuideIdentifier" ColumnName="QuickGuideIdentifier" />
+          <ScalarProperty Name="Translate" ColumnName="Translate" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AdditionalAttributeValues">
+      <EntityTypeMapping TypeName="IOTAModel.AdditionalAttributeValue">
+        <MappingFragment StoreEntitySet="AdditionalAttributeValues">
+          <ScalarProperty Name="AdditionalAttributeValue1" ColumnName="AdditionalAttributeValue" />
+          <ScalarProperty Name="AdditionalAttributeID" ColumnName="AdditionalAttributeID" />
+          <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Addresses">
+      <EntityTypeMapping TypeName="IOTAModel.Address">
+        <MappingFragment StoreEntitySet="Addresses">
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="Address1" ColumnName="Address" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommentCultureDetails">
+      <EntityTypeMapping TypeName="IOTAModel.CommentCultureDetail">
+        <MappingFragment StoreEntitySet="CommentCultureDetails">
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="CultureID" ColumnName="CultureID" />
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comments">
+      <EntityTypeMapping TypeName="IOTAModel.Comment">
+        <MappingFragment StoreEntitySet="Comments">
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Connections">
+      <EntityTypeMapping TypeName="IOTAModel.Connection">
+        <MappingFragment StoreEntitySet="Connections">
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="CheckStatus" ColumnName="CheckStatus" />
+          <ScalarProperty Name="DataPlan" ColumnName="DataPlan" />
+          <ScalarProperty Name="TotalFreeMinutes" ColumnName="TotalFreeMinutes" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="RetiredOn" ColumnName="RetiredOn" />
+          <ScalarProperty Name="AcquiredOn" ColumnName="AcquiredOn" />
+          <ScalarProperty Name="NetworkID" ColumnName="NetworkID" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="Provider" ColumnName="Provider" />
+          <ScalarProperty Name="SIMNumber" ColumnName="SIMNumber" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="IOTAModel.Contact">
+        <MappingFragment StoreEntitySet="Contacts">
+          <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Forename" ColumnName="Forename" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cultures">
+      <EntityTypeMapping TypeName="IOTAModel.Culture">
+        <MappingFragment StoreEntitySet="Cultures">
+          <ScalarProperty Name="IsSupported" ColumnName="IsSupported" />
+          <ScalarProperty Name="Locale" ColumnName="Locale" />
+          <ScalarProperty Name="LanguageCode" ColumnName="LanguageCode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CWIRanges1">
+      <EntityTypeMapping TypeName="IOTAModel.CWIRange">
+        <MappingFragment StoreEntitySet="CWIRanges">
+          <ScalarProperty Name="RangeType" ColumnName="RangeType" />
+          <ScalarProperty Name="IsLatest" ColumnName="IsLatest" />
+          <ScalarProperty Name="VehicleID" ColumnName="VehicleID" />
+          <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+          <ScalarProperty Name="RegularExpression" ColumnName="RegularExpression" />
+          <ScalarProperty Name="RangeEnd" ColumnName="RangeEnd" />
+          <ScalarProperty Name="RangeStart" ColumnName="RangeStart" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeviceStatuses">
+      <EntityTypeMapping TypeName="IOTAModel.DeviceStatus">
+        <MappingFragment StoreEntitySet="DeviceStatuses">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeviceTypes">
+      <EntityTypeMapping TypeName="IOTAModel.DeviceType">
+        <MappingFragment StoreEntitySet="DeviceTypes">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FeatureCultureDetails">
+      <EntityTypeMapping TypeName="IOTAModel.FeatureCultureDetail">
+        <MappingFragment StoreEntitySet="FeatureCultureDetails">
+          <ScalarProperty Name="Feature" ColumnName="Feature" />
+          <ScalarProperty Name="CultureID" ColumnName="CultureID" />
+          <ScalarProperty Name="FeatureID" ColumnName="FeatureID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Features">
+      <EntityTypeMapping TypeName="IOTAModel.Feature">
+        <MappingFragment StoreEntitySet="Features">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="FeatureTypeID" ColumnName="FeatureTypeID" />
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FeatureTypes">
+      <EntityTypeMapping TypeName="IOTAModel.FeatureType">
+        <MappingFragment StoreEntitySet="FeatureTypes">
+          <ScalarProperty Name="FeatureType1" ColumnName="FeatureType" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Networks">
+      <EntityTypeMapping TypeName="IOTAModel.Network">
+        <MappingFragment StoreEntitySet="Networks">
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sections">
+      <EntityTypeMapping TypeName="IOTAModel.Section">
+        <MappingFragment StoreEntitySet="Sections">
+          <ScalarProperty Name="Section1" ColumnName="Section" />
+          <ScalarProperty Name="SectionNumber" ColumnName="SectionNumber" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TestStatuses">
+      <EntityTypeMapping TypeName="IOTAModel.TestStatus">
+        <MappingFragment StoreEntitySet="TestStatuses">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UICategories">
+      <EntityTypeMapping TypeName="IOTAModel.UICategory">
+        <MappingFragment StoreEntitySet="UICategories">
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Controller" ColumnName="Controller" />
+          <ScalarProperty Name="Assignable" ColumnName="Assignable" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="PositionInBranch" ColumnName="PositionInBranch" />
+          <ScalarProperty Name="LevelInTree" ColumnName="LevelInTree" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vehicles">
+      <EntityTypeMapping TypeName="IOTAModel.Vehicle">
+        <MappingFragment StoreEntitySet="Vehicles">
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="DeviceTypesToAdditionalAttributes" TypeName="IOTAModel.DeviceTypesToAdditionalAttributes" StoreEntitySet="DeviceTypesToAdditionalAttributes">
+      <EndProperty Name="DeviceType">
+        <ScalarProperty Name="ID" ColumnName="DeviceTypeID" />
+      </EndProperty>
+      <EndProperty Name="AdditionalAttribute">
+        <ScalarProperty Name="ID" ColumnName="AdditionalAttributeID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="Regions">
+      <EntityTypeMapping TypeName="IOTAModel.Region">
+        <MappingFragment StoreEntitySet="Regions">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="IOTAModel.Country">
+        <MappingFragment StoreEntitySet="Countries">
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Brands">
+      <EntityTypeMapping TypeName="IOTAModel.Brand">
+        <MappingFragment StoreEntitySet="Brands">
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="IOTAModel.Customer">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="VATNumber" ColumnName="VATNumber" />
+          <ScalarProperty Name="CompanyNumber" ColumnName="CompanyNumber" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Devices">
+      <EntityTypeMapping TypeName="IOTAModel.Device">
+        <MappingFragment StoreEntitySet="Devices">
+          <ScalarProperty Name="NextGenID" ColumnName="NextGenID" />
+          <ScalarProperty Name="DeviceTypeID" ColumnName="DeviceTypeID" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="LastChecked" ColumnName="LastChecked" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="RetiredOn" ColumnName="RetiredOn" />
+          <ScalarProperty Name="AcquiredOn" ColumnName="AcquiredOn" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="Provider" ColumnName="Provider" />
+          <ScalarProperty Name="Hardware" ColumnName="Hardware" />
+          <ScalarProperty Name="Software" ColumnName="Software" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="IOTAModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="AllRegions" ColumnName="AllRegions" />
+          <ScalarProperty Name="AllCustomers" ColumnName="AllCustomers" />
+          <ScalarProperty Name="CreateComments" ColumnName="CreateComments" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="CustomerBrandsToDevices" TypeName="IOTAModel.CustomerBrandsToDevices" StoreEntitySet="CustomerBrandsToDevices">
+      <EndProperty Name="Device">
+        <ScalarProperty Name="ID" ColumnName="DeviceID" />
+      </EndProperty>
+      <EndProperty Name="Brand">
+        <ScalarProperty Name="ID" ColumnName="CustomerBrandID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CustomerBrandsToRegions" TypeName="IOTAModel.CustomerBrandsToRegions" StoreEntitySet="CustomerBrandsToRegions">
+      <EndProperty Name="Region">
+        <ScalarProperty Name="ID" ColumnName="RegionID" />
+      </EndProperty>
+      <EndProperty Name="Brand">
+        <ScalarProperty Name="ID" ColumnName="CustomerBrandID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CustomersToAddresses" TypeName="IOTAModel.CustomersToAddresses" StoreEntitySet="CustomersToAddresses">
+      <EndProperty Name="Customer">
+        <ScalarProperty Name="ID" ColumnName="CustomerID" />
+      </EndProperty>
+      <EndProperty Name="Address">
+        <ScalarProperty Name="ID" ColumnName="AddressID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CustomersToBrands" TypeName="IOTAModel.CustomersToBrands" StoreEntitySet="CustomersToBrands">
+      <EndProperty Name="Customer">
+        <ScalarProperty Name="ID" ColumnName="CustomerID" />
+      </EndProperty>
+      <EndProperty Name="Brand">
+        <ScalarProperty Name="ID" ColumnName="BrandID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CustomersToContacts" TypeName="IOTAModel.CustomersToContacts" StoreEntitySet="CustomersToContacts">
+      <EndProperty Name="Customer">
+        <ScalarProperty Name="ID" ColumnName="CustomerID" />
+      </EndProperty>
+      <EndProperty Name="Contact">
+        <ScalarProperty Name="ID" ColumnName="ContactID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UsersToCultures" TypeName="IOTAModel.UsersToCultures" StoreEntitySet="UsersToCultures">
+      <EndProperty Name="User">
+        <ScalarProperty Name="ID" ColumnName="UserID" />
+      </EndProperty>
+      <EndProperty Name="Culture">
+        <ScalarProperty Name="ID" ColumnName="CultureID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UsersToCustomerBrands" TypeName="IOTAModel.UsersToCustomerBrands" StoreEntitySet="UsersToCustomerBrands">
+      <EndProperty Name="User">
+        <ScalarProperty Name="ID" ColumnName="UserID" />
+      </EndProperty>
+      <EndProperty Name="Brand">
+        <ScalarProperty Name="ID" ColumnName="CustomerBrandID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UsersToRegions" TypeName="IOTAModel.UsersToRegions" StoreEntitySet="UsersToRegions">
+      <EndProperty Name="User">
+        <ScalarProperty Name="ID" ColumnName="UserID" />
+      </EndProperty>
+      <EndProperty Name="Region">
+        <ScalarProperty Name="ID" ColumnName="RegionID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UsersToUICategories" TypeName="IOTAModel.UsersToUICategories" StoreEntitySet="UsersToUICategories">
+      <EndProperty Name="User">
+        <ScalarProperty Name="ID" ColumnName="UserID" />
+      </EndProperty>
+      <EndProperty Name="UICategory">
+        <ScalarProperty Name="ID" ColumnName="UICategoryID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="QuickGuides">
+      <EntityTypeMapping TypeName="IOTAModel.QuickGuide">
+        <MappingFragment StoreEntitySet="QuickGuides">
+          <ScalarProperty Name="Discoverable" ColumnName="Discoverable" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuickGuideSections">
+      <EntityTypeMapping TypeName="IOTAModel.QuickGuideSection">
+        <MappingFragment StoreEntitySet="QuickGuideSections">
+          <ScalarProperty Name="SectionNumber" ColumnName="SectionNumber" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuickGuideSteps">
+      <EntityTypeMapping TypeName="IOTAModel.QuickGuideStep">
+        <MappingFragment StoreEntitySet="QuickGuideSteps">
+          <ScalarProperty Name="Grouping" ColumnName="Grouping" />
+          <ScalarProperty Name="Step" ColumnName="Step" />
+          <ScalarProperty Name="QuickGuideTextID" ColumnName="QuickGuideTextID" />
+          <ScalarProperty Name="QuickGuideSectionID" ColumnName="QuickGuideSectionID" />
+          <ScalarProperty Name="QuickGuideID" ColumnName="QuickGuideID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuickGuideTexts">
+      <EntityTypeMapping TypeName="IOTAModel.QuickGuideText">
+        <MappingFragment StoreEntitySet="QuickGuideText">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuickGuideTextCultureDetails">
+      <EntityTypeMapping TypeName="IOTAModel.QuickGuideTextCultureDetail">
+        <MappingFragment StoreEntitySet="QuickGuideTextCultureDetails">
+          <ScalarProperty Name="QuickGuideText" ColumnName="QuickGuideText" />
+          <ScalarProperty Name="CultureID" ColumnName="CultureID" />
+          <ScalarProperty Name="QuickGuideTextID" ColumnName="QuickGuideTextID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TopFeatureCultureDetails">
+      <EntityTypeMapping TypeName="IOTAModel.TopFeatureCultureDetail">
+        <MappingFragment StoreEntitySet="TopFeatureCultureDetails">
+          <ScalarProperty Name="TopFeature" ColumnName="TopFeature" />
+          <ScalarProperty Name="CultureID" ColumnName="CultureID" />
+          <ScalarProperty Name="TopFeatureID" ColumnName="TopFeatureID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TopFeatures">
+      <EntityTypeMapping TypeName="IOTAModel.TopFeature">
+        <MappingFragment StoreEntitySet="TopFeatures">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CWITexts">
+      <EntityTypeMapping TypeName="IOTAModel.CWIText">
+        <MappingFragment StoreEntitySet="CWIText">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CWITextCultureDetails">
+      <EntityTypeMapping TypeName="IOTAModel.CWITextCultureDetail">
+        <MappingFragment StoreEntitySet="CWITextCultureDetails">
+          <ScalarProperty Name="CwiText" ColumnName="CwiText" />
+          <ScalarProperty Name="CultureID" ColumnName="CultureID" />
+          <ScalarProperty Name="CwiTextID" ColumnName="CwiTextID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="BrandsToCwiText" TypeName="IOTAModel.BrandsToCwiText" StoreEntitySet="BrandsToCwiText">
+      <EndProperty Name="CWIText">
+        <ScalarProperty Name="ID" ColumnName="CwiTextID" />
+      </EndProperty>
+      <EndProperty Name="Brand">
+        <ScalarProperty Name="ID" ColumnName="BrandID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

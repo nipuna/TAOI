@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D3CFFB75-B71B-4F41-A245-89A442D7CC9C}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebUI</RootNamespace>
+    <AssemblyName>WebUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=1.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.DynamicProxy2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Castle.DynamicProxy2.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.MicroKernel, Version=2.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Castle.MicroKernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=2.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="DomainModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DomainModel\bin\Debug\DomainModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Dynamic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppCode\Authorization.cs" />
+    <Compile Include="AppCode\BusinessLogic.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\AdministrationController.cs" />
+    <Compile Include="Controllers\BrandsController.cs" />
+    <Compile Include="Controllers\CWITextsController.cs" />
+    <Compile Include="Controllers\CountriesController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\CWIRangesController.cs" />
+    <Compile Include="Controllers\DevicesController.cs" />
+    <Compile Include="Controllers\ErrorsController.cs" />
+    <Compile Include="Controllers\GuidesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LanguagesController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\NavController.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
+    <Compile Include="Controllers\SystemsController.cs" />
+    <Compile Include="Controllers\TestingController.cs" />
+    <Compile Include="Controllers\TranslationController.cs" />
+    <Compile Include="Controllers\UICategoryController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Controllers\VehiclesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="AppCode\PagingHelpers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\ReportViewer.aspx.cs">
+      <DependentUpon>ReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportViewer.aspx.designer.cs">
+      <DependentUpon>ReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WindsorControllerFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="checkboxtree.css" />
+    <Content Include="checkBoxTree.htm" />
+    <Content Include="Content\css\Admin\24grd.css" />
+    <Content Include="Content\css\Admin\960.css" />
+    <Content Include="Content\css\Admin\Administration.css" />
+    <Content Include="Content\css\Admin\chk.css" />
+    <Content Include="Content\css\Admin\css.css" />
+    <Content Include="Content\css\Admin\Customers.css" />
+    <Content Include="Content\css\Admin\CWITexts.css" />
+    <Content Include="Content\css\Admin\languages.css" />
+    <Content Include="Content\css\Admin\reset.css" />
+    <Content Include="Content\css\Admin\User.css" />
+    <Content Include="Content\css\jqgrid\themes\coffee\grid.css" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\cd_run.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\dirty.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\down.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\find.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\first.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\folder.png" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\grid-blue-ft.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\grid-blue-hd.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\headerbg.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\headerleft.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\headerright.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\ico-close.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\last.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\line3.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\loading.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\minus.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\next.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\nochild.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\off-first.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\off-last.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\off-next.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\off-prev.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\plus.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\prev.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\refresh.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\resize.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\row_add.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\row_delete.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\row_edit.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\sort_asc.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\sort_desc.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\spacer.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\tab_close-on.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\tree_leaf.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\tree_minus.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\tree_plus.gif" />
+    <Content Include="Content\css\jqgrid\themes\coffee\images\up.gif" />
+    <Content Include="Content\css\jqgrid\themes\jqModal.css" />
+    <Content Include="Content\css\jqgrid\ui.jqgrid.css" />
+    <Content Include="Content\Images\Admin\1btn.jpg" />
+    <Content Include="Content\Images\Admin\allbrandimg.jpg" />
+    <Content Include="Content\Images\Admin\applelogo.jpg" />
+    <Content Include="Content\Images\Admin\btn2.jpg" />
+    <Content Include="Content\Images\Admin\btn3.jpg" />
+    <Content Include="Content\Images\Admin\create.gif" />
+    <Content Include="Content\Images\Admin\delete.gif" />
+    <Content Include="Content\Images\Admin\editbg.gif" />
+    <Content Include="Content\Images\Admin\editbg.jpg" />
+    <Content Include="Content\Images\Admin\firstbtn.jpg" />
+    <Content Include="Content\Images\Admin\lastbtn.jpg" />
+    <Content Include="Content\Images\Admin\Layer-6.png" />
+    <Content Include="Content\Images\Admin\lglogo.jpg" />
+    <Content Include="Content\Images\Admin\logo2.jpg" />
+    <Content Include="Content\Images\Admin\nextbtn.jpg" />
+    <Content Include="Content\Images\Admin\preciousbtn.jpg" />
+    <Content Include="Content\Images\Admin\searchbg..jpg" />
+    <Content Include="Content\Images\Admin\searchleft.jpg" />
+    <Content Include="Content\Images\Admin\searchright.jpg" />
+    <Content Include="Content\Images\background_repeat.jpg" />
+    <Content Include="Content\Images\close.gif" />
+    <Content Include="Content\Images\flags\Arab-League.ico" />
+    <Content Include="Content\Images\flags\Arab-League.png" />
+    <Content Include="Content\Images\flags\Brazil.ico" />
+    <Content Include="Content\Images\flags\Brazil.png" />
+    <Content Include="Content\Images\flags\Bulgaria.ico" />
+    <Content Include="Content\Images\flags\Bulgaria.png" />
+    <Content Include="Content\Images\flags\China.ico" />
+    <Content Include="Content\Images\flags\China.png" />
+    <Content Include="Content\Images\flags\Croatia.ico" />
+    <Content Include="Content\Images\flags\Croatia.png" />
+    <Content Include="Content\Images\flags\Czech-Republic.ico" />
+    <Content Include="Content\Images\flags\Czech-Republic.png" />
+    <Content Include="Content\Images\flags\Denmark.ico" />
+    <Content Include="Content\Images\flags\Denmark.png" />
+    <Content Include="Content\Images\flags\Estonia.ico" />
+    <Content Include="Content\Images\flags\Estonia.png" />
+    <Content Include="Content\Images\flags\Finland.ico" />
+    <Content Include="Content\Images\flags\Finland.png" />
+    <Content Include="Content\Images\flags\France.ico" />
+    <Content Include="Content\Images\flags\France.png" />
+    <Content Include="Content\Images\flags\Germany.ico" />
+    <Content Include="Content\Images\flags\Germany.png" />
+    <Content Include="Content\Images\flags\Greece.ico" />
+    <Content Include="Content\Images\flags\Greece.png" />
+    <Content Include="Content\Images\flags\Hungary.ico" />
+    <Content Include="Content\Images\flags\Hungary.png" />
+    <Content Include="Content\Images\flags\Italy.ico" />
+    <Content Include="Content\Images\flags\Italy.png" />
+    <Content Include="Content\Images\flags\Japan.ico" />
+    <Content Include="Content\Images\flags\Japan.png" />
+    <Content Include="Content\Images\flags\Latvia.png" />
+    <Content Include="Content\Images\flags\Lithuania.ico" />
+    <Content Include="Content\Images\flags\Lithuania.png" />
+    <Content Include="Content\Images\flags\Netherlands.ico" />
+    <Content Include="Content\Images\flags\Netherlands.png" />
+    <Content Include="Content\Images\flags\Norway.ico" />
+    <Content Include="Content\Images\flags\Norway.png" />
+    <Content Include="Content\Images\flags\Poland.ico" />
+    <Content Include="Content\Images\flags\Poland.png" />
+    <Content Include="Content\Images\flags\Portugal.ico" />
+    <Content Include="Content\Images\flags\Portugal.png" />
+    <Content Include="Content\Images\flags\Romania.ico" />
+    <Content Include="Content\Images\flags\Romania.png" />
+    <Content Include="Content\Images\flags\Russia.ico" />
+    <Content Include="Content\Images\flags\Russia.png" />
+    <Content Include="Content\Images\flags\Slovakia.ico" />
+    <Content Include="Content\Images\flags\Slovakia.png" />
+    <Content Include="Content\Images\flags\Slovenia.ico" />
+    <Content Include="Content\Images\flags\Slovenia.png" />
+    <Content Include="Content\Images\flags\South-Korea.ico" />
+    <Content Include="Content\Images\flags\South-Korea.png" />
+    <Content Include="Content\Images\flags\Spain.ico" />
+    <Content Include="Content\Images\flags\Spain.png" />
+    <Content Include="Content\Images\flags\Sweden.ico" />
+    <Content Include="Content\Images\flags\Sweden.png" />
+    <Content Include="Content\Images\flags\Thailand.ico" />
+    <Content Include="Content\Images\flags\Thailand.png" />
+    <Content Include="Content\Images\flags\Turkey.ico" />
+    <Content Include="Content\Images\flags\Turkey.png" />
+    <Content Include="Content\Images\flags\United-Kingdom.ico" />
+    <Content Include="Content\Images\flags\United-Kingdom.png" />
+    <Content Include="Content\Images\flags\United-States.ico" />
+    <Content Include="Content\Images\flags\United-States.png" />
+    <Content Include="Content\Images\flags\Wales.ico" />
+    <Content Include="Content\Images\flags\Wales.png" />
+    <Content Include="Content\Images\Admin\left.gif" />
+    <Content Include="Content\Images\loginLogo.jpg" />
+    <Content Include="Content\Images\NextGen.png" />
+    <Content Include="Content\Images\nextgen_iota.jpg" />
+    <Content Include="Content\Images\Admin\right.gif" />
+    <Content Include="Content\Images\uicategories\brands.jpg" />
+    <Content Include="Content\Images\uicategories\comments.jpg" />
+    <Content Include="Content\Images\uicategories\comments2.jpg" />
+    <Content Include="Content\Images\uicategories\connections_and_networks.jpg" />
+    <Content Include="Content\Images\uicategories\countries.jpg" />
+    <Content Include="Content\Images\uicategories\dashboard.jpg" />
+    <Content Include="Content\Images\uicategories\define_test.jpg" />
+    <Content Include="Content\Images\uicategories\device.jpg" />
+    <Content Include="Content\Images\uicategories\features.jpg" />
+    <Content Include="Content\Images\uicategories\languages.jpg" />
+    <Content Include="Content\Images\uicategories\perform_test.jpg" />
+    <Content Include="Content\Images\uicategories\preview.jpg" />
+    <Content Include="Content\Images\uicategories\preview2.jpg" />
+    <Content Include="Content\Images\uicategories\quick_guides.jpg" />
+    <Content Include="Content\Images\uicategories\section.jpg" />
+    <Content Include="Content\Images\uicategories\systems.jpg" />
+    <Content Include="Content\Images\uicategories\users.jpg" />
+    <Content Include="Content\Images\uicategories\users2.jpg" />
+    <Content Include="Global.asax" />
+    <Content Include="Lib\Castle.Core.dll" />
+    <Content Include="Lib\Castle.Core.xml" />
+    <Content Include="Lib\Castle.DynamicProxy2.dll" />
+    <Content Include="Lib\Castle.DynamicProxy2.xml" />
+    <Content Include="Lib\Castle.MicroKernel.dll" />
+    <Content Include="Lib\Castle.MicroKernel.xml" />
+    <Content Include="Lib\Castle.Windsor.dll" />
+    <Content Include="Lib\Castle.Windsor.xml" />
+    <Content Include="Reports\ReportViewer.aspx" />
+    <Content Include="Scripts\admin\admin.MyGrid.js" />
+    <Content Include="Scripts\admin\asynchronousUpload.js" />
+    <Content Include="Scripts\admin\CWIText.js" />
+    <Content Include="Scripts\admin\customers.js" />
+    <Content Include="Scripts\admin\Vehicles.js" />
+    <Content Include="Scripts\jquery-autocomplete\jquery.ajaxQueue.js" />
+    <Content Include="Scripts\jquery-autocomplete\jquery.bgiframe.min.js" />
+    <Content Include="Scripts\checkboxtree\jquery.checkboxtree.js" />
+    <Content Include="Scripts\jquery-autocomplete\jquery.js" />
+    <Content Include="Scripts\jquery-autocomplete\thickbox-compressed.js" />
+    <Content Include="Scripts\jqGrid\js\grid.base.js" />
+    <Content Include="Scripts\jqGrid\js\grid.celledit.js" />
+    <Content Include="Scripts\jqGrid\js\grid.common.js" />
+    <Content Include="Scripts\jqGrid\js\grid.custom.js" />
+    <Content Include="Scripts\jqGrid\js\grid.formedit.js" />
+    <Content Include="Scripts\jqGrid\js\grid.import.js" />
+    <Content Include="Scripts\jqGrid\js\grid.inlinedit.js" />
+    <Content Include="Scripts\jqGrid\js\grid.locale-en.js" />
+    <Content Include="Scripts\jqGrid\js\grid.postext.js" />
+    <Content Include="Scripts\jqGrid\js\grid.setcolumns.js" />
+    <Content Include="Scripts\jqGrid\js\grid.subgrid.js" />
+    <Content Include="Scripts\jqGrid\js\grid.tbltogrid.js" />
+    <Content Include="Scripts\jqGrid\js\grid.treegrid.js" />
+    <Content Include="Scripts\jqGrid\js\jqDnR.js" />
+    <Content Include="Scripts\jqGrid\js\jqModal.js" />
+    <Content Include="Scripts\jqGrid\js\jquery.fmatter.js" />
+    <Content Include="Scripts\jqGrid\js\jquery.jqGrid.js" />
+    <Content Include="Scripts\jqGrid\js\jquery.js" />
+    <Content Include="Scripts\jqGrid\js\jquery.layout.js" />
+    <Content Include="Scripts\jqGrid\js\jquery.tablednd.js" />
+    <Content Include="Scripts\jqGrid\js\jquery.ui.all.js" />
+    <Content Include="Scripts\jqGrid\js\json2.js" />
+    <Content Include="Scripts\jqGrid\js\JsonXml.js" />
+    <Content Include="Scripts\jqGrid\js\tablednd.js" />
+    <Content Include="Scripts\jqGrid\readme.txt" />
+    <Content Include="Scripts\jqGrid\themes\lightness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\jqGrid\themes\lightness\images\ui-bg_glass_10_382f28_1x400.png" />
+    <Content Include="Scripts\jqGrid\themes\lightness\images\ui-bg_glass_15_5f391b_1x400.png" />
+    <Content Include="Scripts\jqGrid\themes\lightness\images\ui-bg_glass_20_44372c_1x400.png" />
+    <Content Include="Scripts\jqGrid\themes\lightness\images\ui-bg_gloss-wave_75_cdc2a1_500x100.png" />
+    <Content Include="Scripts\jqGrid\themes\lightness\images\ui-bg_highlight-soft_20_619226_1x100.png" />
+    <Content Include="Scripts\jqGrid\themes\lightness\images\ui-bg_highlight-soft_40_cdc2a1_1x100.png" />
+    <Content Include="Scripts\jqGrid\themes\lightness\images\ui-bg_inset-soft_40_cdc2a1_1x100.png" />
+    <Content Include="Scripts\jqGrid\themes\lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\jqGrid\themes\lightness\images\ui-icons_382f28_256x240.png" />
+    <Content Include="Scripts\jqGrid\themes\lightness\images\ui-icons_9bcc60_256x240.png" />
+    <Content Include="Scripts\jqGrid\themes\lightness\images\ui-icons_add978_256x240.png" />
+    <Content Include="Scripts\jqGrid\themes\lightness\images\ui-icons_f1fd86_256x240.png" />
+    <Content Include="Scripts\jqGrid\themes\lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jqGrid\themes\lightness\ui.all.css" />
+    <Content Include="Scripts\jqGrid\themes\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\jqGrid\themes\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Scripts\jqGrid\themes\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Scripts\jqGrid\themes\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Scripts\jqGrid\themes\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Scripts\jqGrid\themes\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Scripts\jqGrid\themes\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Scripts\jqGrid\themes\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Scripts\jqGrid\themes\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Scripts\jqGrid\themes\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\jqGrid\themes\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Scripts\jqGrid\themes\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Scripts\jqGrid\themes\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\jqGrid\themes\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Scripts\jqGrid\themes\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Scripts\jqGrid\themes\redmond\redmondCustom.css" />
+    <Content Include="Scripts\jqGrid\themes\ui.jqgrid.css" />
+    <Content Include="Content\jquery-autocomplete\jquery.autocomplete.css" />
+    <Content Include="Scripts\jquery-autocomplete\jquery.autocomplete.js" />
+    <Content Include="Scripts\jquery-autocomplete\jquery.autocomplete.min.js" />
+    <Content Include="Scripts\jquery-autocomplete\jquery.autocomplete.pack.js" />
+    <Content Include="Scripts\jqUIPortlets\js\ui.core.js" />
+    <Content Include="Scripts\jqUIPortlets\js\ui.sortable.js" />
+    <Content Include="Scripts\jqUIPortlets\ui.all.css" />
+    <Content Include="Scripts\JSONParser\JSONParser.js" />
+    <Content Include="Scripts\Screens\CWiRanges.js" />
+    <Content Include="Views\Administration\LogIn.aspx" />
+    <Content Include="Views\Brands\Edit.aspx" />
+    <Content Include="Views\Brands\Index.aspx" />
+    <Content Include="Views\Countries\Edit.aspx" />
+    <Content Include="Views\Countries\Index.aspx" />
+    <Content Include="Views\Customers\Edit.aspx" />
+    <Content Include="Views\Customers\Index.aspx" />
+    <Content Include="Views\CWIRanges\Index.aspx" />
+    <Content Include="Views\CWITexts\Edit.aspx" />
+    <Content Include="Views\CWITexts\Index.aspx" />
+    <Content Include="Views\Devices\Connections.aspx" />
+    <Content Include="Views\Devices\Index.aspx" />
+    <Content Include="Views\Errors\Index.aspx" />
+    <Content Include="Views\Guides\Index.aspx" />
+    <Content Include="Views\Guides\Preview.aspx" />
+    <Content Include="Views\Guides\Sections.aspx" />
+    <Content Include="Views\Home\Dashboard.aspx" />
+    <Content Include="Views\Languages\Index.aspx" />
+    <Content Include="Views\Login\StatusDisplay.ascx" />
+    <Content Include="Views\Nav\Navigation.ascx" />
+    <Content Include="Views\Reports\FeatureResults.aspx" />
+    <Content Include="Views\Reports\IOCompatibility.aspx" />
+    <Content Include="Views\Reports\TestComments.aspx" />
+    <Content Include="Views\Reports\Translations.aspx" />
+    <Content Include="Views\Systems\Index.aspx" />
+    <Content Include="Views\Testing\Define.aspx" />
+    <Content Include="Views\Testing\Features.aspx" />
+    <Content Include="Views\Testing\Perform.aspx" />
+    <Content Include="Views\Translation\Comments.aspx" />
+    <Content Include="Views\Translation\Features.aspx" />
+    <Content Include="Views\Translation\Guides.aspx" />
+    <Content Include="Views\Translation\Sections.aspx" />
+    <Content Include="Views\UICategory\Index.aspx" />
+    <Content Include="Views\Users\Edit.aspx" />
+    <Content Include="Views\Users\Index.aspx" />
+    <Content Include="Views\Vehicles\Edit.aspx" />
+    <Content Include="Views\Vehicles\Index.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\styles.css" />
+    <Content Include="Scripts\jquery-1.3.2.js" />
+    <Content Include="Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Scripts\jquery-1.3.2-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\jqGridData\" />
+    <Folder Include="HTMLHelpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\Images\uicategories\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4404</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

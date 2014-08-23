@@ -1,0 +1,16 @@
+﻿body {
+}
+
+#ScrollCB
+{
+ height:50;
+ width:200px;
+ overflow:auto;
+ visibility:hidden;
+ display:none;
+ position:absolute;
+ z-index: 1000;
+ opacity:10;
+ filter:Alpha(Opacity=100);
+ background-color:White;   
+}

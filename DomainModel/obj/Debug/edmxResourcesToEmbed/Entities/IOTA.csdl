@@ -1,0 +1,1088 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IOTAModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="IOTAEntities">
+    <EntitySet Name="Accessories" EntityType="IOTAModel.Accessory" />
+    <EntitySet Name="AdditionalAttributes" EntityType="IOTAModel.AdditionalAttribute" />
+    <EntitySet Name="AdditionalAttributeValues" EntityType="IOTAModel.AdditionalAttributeValue" />
+    <EntitySet Name="Addresses" EntityType="IOTAModel.Address" />
+    <EntitySet Name="CommentCultureDetails" EntityType="IOTAModel.CommentCultureDetail" />
+    <EntitySet Name="Comments" EntityType="IOTAModel.Comment" />
+    <EntitySet Name="Connections" EntityType="IOTAModel.Connection" />
+    <EntitySet Name="Contacts" EntityType="IOTAModel.Contact" />
+    <EntitySet Name="Cultures" EntityType="IOTAModel.Culture" />
+    <EntitySet Name="CWIRanges1" EntityType="IOTAModel.CWIRange" />
+    <EntitySet Name="DeviceStatuses" EntityType="IOTAModel.DeviceStatus" />
+    <EntitySet Name="DeviceTypes" EntityType="IOTAModel.DeviceType" />
+    <EntitySet Name="FeatureCultureDetails" EntityType="IOTAModel.FeatureCultureDetail" />
+    <EntitySet Name="Features" EntityType="IOTAModel.Feature" />
+    <EntitySet Name="FeatureTypes" EntityType="IOTAModel.FeatureType" />
+    <EntitySet Name="Networks" EntityType="IOTAModel.Network" />
+    <EntitySet Name="Sections" EntityType="IOTAModel.Section" />
+    <EntitySet Name="TestStatuses" EntityType="IOTAModel.TestStatus" />
+    <EntitySet Name="UICategories" EntityType="IOTAModel.UICategory" />
+    <EntitySet Name="Vehicles" EntityType="IOTAModel.Vehicle" />
+    <AssociationSet Name="FK_DevicesToAdditionalAttributes_AdditionalAttributes" Association="IOTAModel.FK_DevicesToAdditionalAttributes_AdditionalAttributes">
+      <End Role="AdditionalAttribute" EntitySet="AdditionalAttributes" />
+      <End Role="AdditionalAttributeValue" EntitySet="AdditionalAttributeValues" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contacts_Addresses" Association="IOTAModel.FK_Contacts_Addresses">
+      <End Role="Address" EntitySet="Addresses" />
+      <End Role="Contact" EntitySet="Contacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CommentCultureDetails_Comments" Association="IOTAModel.FK_CommentCultureDetails_Comments">
+      <End Role="Comment" EntitySet="Comments" />
+      <End Role="CommentCultureDetail" EntitySet="CommentCultureDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CommentCultureDetails_Cultures" Association="IOTAModel.FK_CommentCultureDetails_Cultures">
+      <End Role="Culture" EntitySet="Cultures" />
+      <End Role="CommentCultureDetail" EntitySet="CommentCultureDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comments_Sections" Association="IOTAModel.FK_Comments_Sections">
+      <End Role="Section" EntitySet="Sections" />
+      <End Role="Comment" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Connections_Networks" Association="IOTAModel.FK_Connections_Networks">
+      <End Role="Network" EntitySet="Networks" />
+      <End Role="Connection" EntitySet="Connections" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FeatureCultureDetails_Cultures" Association="IOTAModel.FK_FeatureCultureDetails_Cultures">
+      <End Role="Culture" EntitySet="Cultures" />
+      <End Role="FeatureCultureDetail" EntitySet="FeatureCultureDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VINs_Vehicle" Association="IOTAModel.FK_VINs_Vehicle">
+      <End Role="Vehicle" EntitySet="Vehicles" />
+      <End Role="CWIRanx" EntitySet="CWIRanges1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FeatureCultureDetails_Features" Association="IOTAModel.FK_FeatureCultureDetails_Features">
+      <End Role="Feature" EntitySet="Features" />
+      <End Role="FeatureCultureDetail" EntitySet="FeatureCultureDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Features_FeatureTypes" Association="IOTAModel.FK_Features_FeatureTypes">
+      <End Role="FeatureType" EntitySet="FeatureTypes" />
+      <End Role="Feature" EntitySet="Features" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Features_Sections" Association="IOTAModel.FK_Features_Sections">
+      <End Role="Section" EntitySet="Sections" />
+      <End Role="Feature" EntitySet="Features" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UICategories_UICategories" Association="IOTAModel.FK_UICategories_UICategories">
+      <End Role="UICategory" EntitySet="UICategories" />
+      <End Role="UICategory1" EntitySet="UICategories" />
+    </AssociationSet>
+    <AssociationSet Name="DeviceTypesToAdditionalAttributes" Association="IOTAModel.DeviceTypesToAdditionalAttributes">
+      <End Role="AdditionalAttribute" EntitySet="AdditionalAttributes" />
+      <End Role="DeviceType" EntitySet="DeviceTypes" />
+    </AssociationSet>
+    <EntitySet Name="Regions" EntityType="IOTAModel.Region" />
+    <EntitySet Name="Countries" EntityType="IOTAModel.Country" />
+    <AssociationSet Name="FK_Accessory_Countries" Association="IOTAModel.FK_Accessory_Countries">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="Accessory" EntitySet="Accessories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Addresses_Countries" Association="IOTAModel.FK_Addresses_Countries">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="Address" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Connections_Countries" Association="IOTAModel.FK_Connections_Countries">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="Connection" EntitySet="Connections" />
+    </AssociationSet>
+    <EntitySet Name="Brands" EntityType="IOTAModel.Brand" />
+    <EntitySet Name="Customers" EntityType="IOTAModel.Customer" />
+    <EntitySet Name="Devices" EntityType="IOTAModel.Device" />
+    <EntitySet Name="Users" EntityType="IOTAModel.User" />
+    <AssociationSet Name="FK_Accessory_Brands" Association="IOTAModel.FK_Accessory_Brands">
+      <End Role="Brand" EntitySet="Brands" />
+      <End Role="Accessory" EntitySet="Accessories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DevicesToAdditionalAttributes_Devices" Association="IOTAModel.FK_DevicesToAdditionalAttributes_Devices">
+      <End Role="Device" EntitySet="Devices" />
+      <End Role="AdditionalAttributeValue" EntitySet="AdditionalAttributeValues" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Devices_Brands" Association="IOTAModel.FK_Devices_Brands">
+      <End Role="Brand" EntitySet="Brands" />
+      <End Role="Device" EntitySet="Devices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vehicle_Brands" Association="IOTAModel.FK_Vehicle_Brands">
+      <End Role="Brand" EntitySet="Brands" />
+      <End Role="Vehicle" EntitySet="Vehicles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Contacts" Association="IOTAModel.FK_Users_Contacts">
+      <End Role="Contact" EntitySet="Contacts" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Devices_Countries" Association="IOTAModel.FK_Devices_Countries">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="Device" EntitySet="Devices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VINs_Devices" Association="IOTAModel.FK_VINs_Devices">
+      <End Role="Device" EntitySet="Devices" />
+      <End Role="CWIRange" EntitySet="CWIRanges1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Devices_DeviceTypes" Association="IOTAModel.FK_Devices_DeviceTypes">
+      <End Role="DeviceType" EntitySet="DeviceTypes" />
+      <End Role="Device" EntitySet="Devices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Devices_Statuses" Association="IOTAModel.FK_Devices_Statuses">
+      <End Role="DeviceStatus" EntitySet="DeviceStatuses" />
+      <End Role="Device" EntitySet="Devices" />
+    </AssociationSet>
+    <AssociationSet Name="CustomerBrandsToDevices" Association="IOTAModel.CustomerBrandsToDevices">
+      <End Role="Brand" EntitySet="Brands" />
+      <End Role="Device" EntitySet="Devices" />
+    </AssociationSet>
+    <AssociationSet Name="CustomerBrandsToRegions" Association="IOTAModel.CustomerBrandsToRegions">
+      <End Role="Brand" EntitySet="Brands" />
+      <End Role="Region" EntitySet="Regions" />
+    </AssociationSet>
+    <AssociationSet Name="CustomersToAddresses" Association="IOTAModel.CustomersToAddresses">
+      <End Role="Address" EntitySet="Addresses" />
+      <End Role="Customer" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="CustomersToBrands" Association="IOTAModel.CustomersToBrands">
+      <End Role="Brand" EntitySet="Brands" />
+      <End Role="Customer" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="CustomersToContacts" Association="IOTAModel.CustomersToContacts">
+      <End Role="Contact" EntitySet="Contacts" />
+      <End Role="Customer" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="UsersToCultures" Association="IOTAModel.UsersToCultures">
+      <End Role="Culture" EntitySet="Cultures" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="UsersToCustomerBrands" Association="IOTAModel.UsersToCustomerBrands">
+      <End Role="Brand" EntitySet="Brands" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="UsersToRegions" Association="IOTAModel.UsersToRegions">
+      <End Role="Region" EntitySet="Regions" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="UsersToUICategories" Association="IOTAModel.UsersToUICategories">
+      <End Role="UICategory" EntitySet="UICategories" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <EntitySet Name="QuickGuides" EntityType="IOTAModel.QuickGuide" />
+    <EntitySet Name="QuickGuideSections" EntityType="IOTAModel.QuickGuideSection" />
+    <EntitySet Name="QuickGuideSteps" EntityType="IOTAModel.QuickGuideStep" />
+    <EntitySet Name="QuickGuideTexts" EntityType="IOTAModel.QuickGuideText" />
+    <EntitySet Name="QuickGuideTextCultureDetails" EntityType="IOTAModel.QuickGuideTextCultureDetail" />
+    <EntitySet Name="TopFeatureCultureDetails" EntityType="IOTAModel.TopFeatureCultureDetail" />
+    <EntitySet Name="TopFeatures" EntityType="IOTAModel.TopFeature" />
+    <AssociationSet Name="FK_QuickGuideTextCultureDetails_Cultures" Association="IOTAModel.FK_QuickGuideTextCultureDetails_Cultures">
+      <End Role="Culture" EntitySet="Cultures" />
+      <End Role="QuickGuideTextCultureDetail" EntitySet="QuickGuideTextCultureDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TopFeatureCultureDetails_Cultures" Association="IOTAModel.FK_TopFeatureCultureDetails_Cultures">
+      <End Role="Culture" EntitySet="Cultures" />
+      <End Role="TopFeatureCultureDetail" EntitySet="TopFeatureCultureDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QuickGuideSteps_QuickGuides" Association="IOTAModel.FK_QuickGuideSteps_QuickGuides">
+      <End Role="QuickGuide" EntitySet="QuickGuides" />
+      <End Role="QuickGuideStep" EntitySet="QuickGuideSteps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QuickGuideSteps_QuickGuideSections" Association="IOTAModel.FK_QuickGuideSteps_QuickGuideSections">
+      <End Role="QuickGuideSection" EntitySet="QuickGuideSections" />
+      <End Role="QuickGuideStep" EntitySet="QuickGuideSteps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QuickGuideSteps_QuickGuideText" Association="IOTAModel.FK_QuickGuideSteps_QuickGuideText">
+      <End Role="QuickGuideText" EntitySet="QuickGuideTexts" />
+      <End Role="QuickGuideStep" EntitySet="QuickGuideSteps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QuickGuideTextCultureDetails_QuickGuideText" Association="IOTAModel.FK_QuickGuideTextCultureDetails_QuickGuideText">
+      <End Role="QuickGuideText" EntitySet="QuickGuideTexts" />
+      <End Role="QuickGuideTextCultureDetail" EntitySet="QuickGuideTextCultureDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TopFeatureCultureDetails_TopFeatures" Association="IOTAModel.FK_TopFeatureCultureDetails_TopFeatures">
+      <End Role="TopFeature" EntitySet="TopFeatures" />
+      <End Role="TopFeatureCultureDetail" EntitySet="TopFeatureCultureDetails" />
+    </AssociationSet>
+    <EntitySet Name="CWITexts" EntityType="IOTAModel.CWIText" />
+    <EntitySet Name="CWITextCultureDetails" EntityType="IOTAModel.CWITextCultureDetail" />
+    <AssociationSet Name="FK_CWITextCultureDetails_Cultures" Association="IOTAModel.FK_CWITextCultureDetails_Cultures">
+      <End Role="Culture" EntitySet="Cultures" />
+      <End Role="CWITextCultureDetail" EntitySet="CWITextCultureDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CWITextCultureDetails_CWIText" Association="IOTAModel.FK_CWITextCultureDetails_CWIText">
+      <End Role="CWIText" EntitySet="CWITexts" />
+      <End Role="CWITextCultureDetail" EntitySet="CWITextCultureDetails" />
+    </AssociationSet>
+    <AssociationSet Name="BrandsToCwiText" Association="IOTAModel.BrandsToCwiText">
+      <End Role="Brand" EntitySet="Brands" />
+      <End Role="CWIText" EntitySet="CWITexts" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Accessory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Code" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="BrandID" Nullable="false" />
+    <Property Type="String" Name="Model" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Provider" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="StatusID" Nullable="false" />
+    <Property Type="DateTime" Name="AcquiredOn" />
+    <Property Type="DateTime" Name="RetiredOn" />
+    <Property Type="Int32" Name="CountryID" Nullable="false" />
+    <NavigationProperty Name="Country" Relationship="IOTAModel.FK_Accessory_Countries" FromRole="Accessory" ToRole="Country" />
+    <NavigationProperty Name="Brand" Relationship="IOTAModel.FK_Accessory_Brands" FromRole="Accessory" ToRole="Brand" />
+  </EntityType>
+  <EntityType Name="AdditionalAttribute">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Translate" Nullable="false" />
+    <Property Type="String" Name="QuickGuideIdentifier" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DefaultValue" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AdditionalAttributeValues" Relationship="IOTAModel.FK_DevicesToAdditionalAttributes_AdditionalAttributes" FromRole="AdditionalAttribute" ToRole="AdditionalAttributeValue" />
+    <NavigationProperty Name="DeviceTypes" Relationship="IOTAModel.DeviceTypesToAdditionalAttributes" FromRole="AdditionalAttribute" ToRole="DeviceType" />
+  </EntityType>
+  <EntityType Name="AdditionalAttributeValue">
+    <Key>
+      <PropertyRef Name="DeviceID" />
+      <PropertyRef Name="AdditionalAttributeID" />
+    </Key>
+    <Property Type="Int32" Name="DeviceID" Nullable="false" />
+    <Property Type="Int32" Name="AdditionalAttributeID" Nullable="false" />
+    <Property Type="String" Name="AdditionalAttributeValue1" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AdditionalAttribute" Relationship="IOTAModel.FK_DevicesToAdditionalAttributes_AdditionalAttributes" FromRole="AdditionalAttributeValue" ToRole="AdditionalAttribute" />
+    <NavigationProperty Name="Device" Relationship="IOTAModel.FK_DevicesToAdditionalAttributes_Devices" FromRole="AdditionalAttributeValue" ToRole="Device" />
+  </EntityType>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address1" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CountryID" />
+    <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Contacts" Relationship="IOTAModel.FK_Contacts_Addresses" FromRole="Address" ToRole="Contact" />
+    <NavigationProperty Name="Country" Relationship="IOTAModel.FK_Addresses_Countries" FromRole="Address" ToRole="Country" />
+    <NavigationProperty Name="Customers" Relationship="IOTAModel.CustomersToAddresses" FromRole="Address" ToRole="Customer" />
+  </EntityType>
+  <EntityType Name="CommentCultureDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="CommentID" Nullable="false" />
+    <Property Type="Int32" Name="CultureID" Nullable="false" />
+    <Property Type="String" Name="Comment" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Comment1" Relationship="IOTAModel.FK_CommentCultureDetails_Comments" FromRole="CommentCultureDetail" ToRole="Comment" />
+    <NavigationProperty Name="Culture" Relationship="IOTAModel.FK_CommentCultureDetails_Cultures" FromRole="CommentCultureDetail" ToRole="Culture" />
+  </EntityType>
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="SectionID" Nullable="false" />
+    <NavigationProperty Name="CommentCultureDetails" Relationship="IOTAModel.FK_CommentCultureDetails_Comments" FromRole="Comment" ToRole="CommentCultureDetail" />
+    <NavigationProperty Name="Section" Relationship="IOTAModel.FK_Comments_Sections" FromRole="Comment" ToRole="Section" />
+  </EntityType>
+  <EntityType Name="Connection">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="SIMNumber" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Provider" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="StatusID" Nullable="false" />
+    <Property Type="Int32" Name="NetworkID" />
+    <Property Type="DateTime" Name="AcquiredOn" />
+    <Property Type="DateTime" Name="RetiredOn" />
+    <Property Type="String" Name="Comment" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CountryID" Nullable="false" />
+    <Property Type="String" Name="Alias" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="TotalFreeMinutes" />
+    <Property Type="String" Name="DataPlan" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CheckStatus" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Details" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Comments" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Network" Relationship="IOTAModel.FK_Connections_Networks" FromRole="Connection" ToRole="Network" />
+    <NavigationProperty Name="Country" Relationship="IOTAModel.FK_Connections_Countries" FromRole="Connection" ToRole="Country" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Forename" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Surname" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Role" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="AddressID" />
+    <NavigationProperty Name="Address" Relationship="IOTAModel.FK_Contacts_Addresses" FromRole="Contact" ToRole="Address" />
+    <NavigationProperty Name="Users" Relationship="IOTAModel.FK_Users_Contacts" FromRole="Contact" ToRole="User" />
+    <NavigationProperty Name="Customers" Relationship="IOTAModel.CustomersToContacts" FromRole="Contact" ToRole="Customer" />
+  </EntityType>
+  <EntityType Name="Culture">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="LanguageCode" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="Locale" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsSupported" Nullable="false" />
+    <NavigationProperty Name="CommentCultureDetails" Relationship="IOTAModel.FK_CommentCultureDetails_Cultures" FromRole="Culture" ToRole="CommentCultureDetail" />
+    <NavigationProperty Name="FeatureCultureDetails" Relationship="IOTAModel.FK_FeatureCultureDetails_Cultures" FromRole="Culture" ToRole="FeatureCultureDetail" />
+    <NavigationProperty Name="Users" Relationship="IOTAModel.UsersToCultures" FromRole="Culture" ToRole="User" />
+    <NavigationProperty Name="QuickGuideTextCultureDetails" Relationship="IOTAModel.FK_QuickGuideTextCultureDetails_Cultures" FromRole="Culture" ToRole="QuickGuideTextCultureDetail" />
+    <NavigationProperty Name="TopFeatureCultureDetails" Relationship="IOTAModel.FK_TopFeatureCultureDetails_Cultures" FromRole="Culture" ToRole="TopFeatureCultureDetail" />
+    <NavigationProperty Name="CWITextCultureDetails" Relationship="IOTAModel.FK_CWITextCultureDetails_Cultures" FromRole="Culture" ToRole="CWITextCultureDetail" />
+  </EntityType>
+  <EntityType Name="CWIRange">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="RangeStart" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RangeEnd" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RegularExpression" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DeviceID" />
+    <Property Type="Int32" Name="VehicleID" />
+    <Property Type="Boolean" Name="IsLatest" Nullable="false" />
+    <Property Type="Int32" Name="RangeType" Nullable="false" />
+    <NavigationProperty Name="Vehicle" Relationship="IOTAModel.FK_VINs_Vehicle" FromRole="CWIRanx" ToRole="Vehicle" />
+    <NavigationProperty Name="Device" Relationship="IOTAModel.FK_VINs_Devices" FromRole="CWIRange" ToRole="Device" />
+  </EntityType>
+  <EntityType Name="DeviceStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Status" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Devices" Relationship="IOTAModel.FK_Devices_Statuses" FromRole="DeviceStatus" ToRole="Device" />
+  </EntityType>
+  <EntityType Name="DeviceType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AdditionalAttributes" Relationship="IOTAModel.DeviceTypesToAdditionalAttributes" FromRole="DeviceType" ToRole="AdditionalAttribute" />
+    <NavigationProperty Name="Devices" Relationship="IOTAModel.FK_Devices_DeviceTypes" FromRole="DeviceType" ToRole="Device" />
+  </EntityType>
+  <EntityType Name="FeatureCultureDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="FeatureID" Nullable="false" />
+    <Property Type="Int32" Name="CultureID" Nullable="false" />
+    <Property Type="String" Name="Feature" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Culture" Relationship="IOTAModel.FK_FeatureCultureDetails_Cultures" FromRole="FeatureCultureDetail" ToRole="Culture" />
+    <NavigationProperty Name="Feature1" Relationship="IOTAModel.FK_FeatureCultureDetails_Features" FromRole="FeatureCultureDetail" ToRole="Feature" />
+  </EntityType>
+  <EntityType Name="Feature">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="SectionID" Nullable="false" />
+    <Property Type="Int32" Name="FeatureTypeID" Nullable="false" />
+    <Property Type="Int32" Name="OrderNumber" Nullable="false" />
+    <NavigationProperty Name="FeatureCultureDetails" Relationship="IOTAModel.FK_FeatureCultureDetails_Features" FromRole="Feature" ToRole="FeatureCultureDetail" />
+    <NavigationProperty Name="FeatureType" Relationship="IOTAModel.FK_Features_FeatureTypes" FromRole="Feature" ToRole="FeatureType" />
+    <NavigationProperty Name="Section" Relationship="IOTAModel.FK_Features_Sections" FromRole="Feature" ToRole="Section" />
+    <Property Type="String" Name="Name" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FeatureType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="FeatureType1" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Features" Relationship="IOTAModel.FK_Features_FeatureTypes" FromRole="FeatureType" ToRole="Feature" />
+  </EntityType>
+  <EntityType Name="Network">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Logo" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Connections" Relationship="IOTAModel.FK_Connections_Networks" FromRole="Network" ToRole="Connection" />
+  </EntityType>
+  <EntityType Name="Section">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="SectionNumber" Nullable="false" />
+    <Property Type="String" Name="Section1" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Comments" Relationship="IOTAModel.FK_Comments_Sections" FromRole="Section" ToRole="Comment" />
+    <NavigationProperty Name="Features" Relationship="IOTAModel.FK_Features_Sections" FromRole="Section" ToRole="Feature" />
+  </EntityType>
+  <EntityType Name="TestStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UICategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ParentID" />
+    <Property Type="Int32" Name="LevelInTree" Nullable="false" />
+    <Property Type="Int32" Name="PositionInBranch" Nullable="false" />
+    <Property Type="String" Name="Icon" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Assignable" Nullable="false" />
+    <Property Type="String" Name="Controller" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Action" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SubCategories" Relationship="IOTAModel.FK_UICategories_UICategories" FromRole="UICategory" ToRole="UICategory1" />
+    <NavigationProperty Name="ParentCategory" Relationship="IOTAModel.FK_UICategories_UICategories" FromRole="UICategory1" ToRole="UICategory" />
+    <NavigationProperty Name="Users" Relationship="IOTAModel.UsersToUICategories" FromRole="UICategory" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Vehicle">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="BrandID" Nullable="false" />
+    <Property Type="String" Name="Model" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CWIRanges" Relationship="IOTAModel.FK_VINs_Vehicle" FromRole="Vehicle" ToRole="CWIRanx" />
+    <NavigationProperty Name="Brand" Relationship="IOTAModel.FK_Vehicle_Brands" FromRole="Vehicle" ToRole="Brand" />
+  </EntityType>
+  <Association Name="FK_DevicesToAdditionalAttributes_AdditionalAttributes">
+    <End Type="IOTAModel.AdditionalAttribute" Role="AdditionalAttribute" Multiplicity="1" />
+    <End Type="IOTAModel.AdditionalAttributeValue" Role="AdditionalAttributeValue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdditionalAttribute">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AdditionalAttributeValue">
+        <PropertyRef Name="AdditionalAttributeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contacts_Addresses">
+    <End Type="IOTAModel.Address" Role="Address" Multiplicity="0..1" />
+    <End Type="IOTAModel.Contact" Role="Contact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Contact">
+        <PropertyRef Name="AddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CommentCultureDetails_Comments">
+    <End Type="IOTAModel.Comment" Role="Comment" Multiplicity="1" />
+    <End Type="IOTAModel.CommentCultureDetail" Role="CommentCultureDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Comment">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CommentCultureDetail">
+        <PropertyRef Name="CommentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CommentCultureDetails_Cultures">
+    <End Type="IOTAModel.Culture" Role="Culture" Multiplicity="1" />
+    <End Type="IOTAModel.CommentCultureDetail" Role="CommentCultureDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Culture">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CommentCultureDetail">
+        <PropertyRef Name="CultureID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comments_Sections">
+    <End Type="IOTAModel.Section" Role="Section" Multiplicity="1" />
+    <End Type="IOTAModel.Comment" Role="Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="SectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Connections_Networks">
+    <End Type="IOTAModel.Network" Role="Network" Multiplicity="0..1" />
+    <End Type="IOTAModel.Connection" Role="Connection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Network">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Connection">
+        <PropertyRef Name="NetworkID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FeatureCultureDetails_Cultures">
+    <End Type="IOTAModel.Culture" Role="Culture" Multiplicity="1" />
+    <End Type="IOTAModel.FeatureCultureDetail" Role="FeatureCultureDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Culture">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FeatureCultureDetail">
+        <PropertyRef Name="CultureID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VINs_Vehicle">
+    <End Type="IOTAModel.Vehicle" Role="Vehicle" Multiplicity="0..1" />
+    <End Type="IOTAModel.CWIRange" Role="CWIRanx" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicle">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CWIRanx">
+        <PropertyRef Name="VehicleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FeatureCultureDetails_Features">
+    <End Type="IOTAModel.Feature" Role="Feature" Multiplicity="1" />
+    <End Type="IOTAModel.FeatureCultureDetail" Role="FeatureCultureDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Feature">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FeatureCultureDetail">
+        <PropertyRef Name="FeatureID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Features_FeatureTypes">
+    <End Type="IOTAModel.FeatureType" Role="FeatureType" Multiplicity="1" />
+    <End Type="IOTAModel.Feature" Role="Feature" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FeatureType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Feature">
+        <PropertyRef Name="FeatureTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Features_Sections">
+    <End Type="IOTAModel.Section" Role="Section" Multiplicity="1" />
+    <End Type="IOTAModel.Feature" Role="Feature" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Feature">
+        <PropertyRef Name="SectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UICategories_UICategories">
+    <End Type="IOTAModel.UICategory" Role="UICategory" Multiplicity="0..1" />
+    <End Type="IOTAModel.UICategory" Role="UICategory1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UICategory">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UICategory1">
+        <PropertyRef Name="ParentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DeviceTypesToAdditionalAttributes">
+    <End Type="IOTAModel.AdditionalAttribute" Role="AdditionalAttribute" Multiplicity="*" />
+    <End Type="IOTAModel.DeviceType" Role="DeviceType" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Region">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Brands" Relationship="IOTAModel.CustomerBrandsToRegions" FromRole="Region" ToRole="Brand" />
+    <NavigationProperty Name="Users" Relationship="IOTAModel.UsersToRegions" FromRole="Region" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Logo" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Accessories" Relationship="IOTAModel.FK_Accessory_Countries" FromRole="Country" ToRole="Accessory" />
+    <NavigationProperty Name="Addresses" Relationship="IOTAModel.FK_Addresses_Countries" FromRole="Country" ToRole="Address" />
+    <NavigationProperty Name="Connections" Relationship="IOTAModel.FK_Connections_Countries" FromRole="Country" ToRole="Connection" />
+    <NavigationProperty Name="Devices" Relationship="IOTAModel.FK_Devices_Countries" FromRole="Country" ToRole="Device" />
+  </EntityType>
+  <Association Name="FK_Accessory_Countries">
+    <End Type="IOTAModel.Country" Role="Country" Multiplicity="1" />
+    <End Type="IOTAModel.Accessory" Role="Accessory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Accessory">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Addresses_Countries">
+    <End Type="IOTAModel.Country" Role="Country" Multiplicity="0..1" />
+    <End Type="IOTAModel.Address" Role="Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Connections_Countries">
+    <End Type="IOTAModel.Country" Role="Country" Multiplicity="1" />
+    <End Type="IOTAModel.Connection" Role="Connection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Connection">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Logo" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Accessories" Relationship="IOTAModel.FK_Accessory_Brands" FromRole="Brand" ToRole="Accessory" />
+    <NavigationProperty Name="Devices" Relationship="IOTAModel.FK_Devices_Brands" FromRole="Brand" ToRole="Device" />
+    <NavigationProperty Name="Vehicles" Relationship="IOTAModel.FK_Vehicle_Brands" FromRole="Brand" ToRole="Vehicle" />
+    <NavigationProperty Name="Devices1" Relationship="IOTAModel.CustomerBrandsToDevices" FromRole="Brand" ToRole="Device" />
+    <NavigationProperty Name="Regions" Relationship="IOTAModel.CustomerBrandsToRegions" FromRole="Brand" ToRole="Region" />
+    <NavigationProperty Name="Customers" Relationship="IOTAModel.CustomersToBrands" FromRole="Brand" ToRole="Customer" />
+    <NavigationProperty Name="Users" Relationship="IOTAModel.UsersToCustomerBrands" FromRole="Brand" ToRole="User" />
+    <NavigationProperty Name="CWITexts" Relationship="IOTAModel.BrandsToCwiText" FromRole="Brand" ToRole="CWIText" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Website" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CompanyNumber" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="VATNumber" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Comments" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Addresses" Relationship="IOTAModel.CustomersToAddresses" FromRole="Customer" ToRole="Address" />
+    <NavigationProperty Name="Brands" Relationship="IOTAModel.CustomersToBrands" FromRole="Customer" ToRole="Brand" />
+    <NavigationProperty Name="Contacts" Relationship="IOTAModel.CustomersToContacts" FromRole="Customer" ToRole="Contact" />
+  </EntityType>
+  <EntityType Name="Device">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="SerialNumber" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="BrandID" Nullable="false" />
+    <Property Type="String" Name="Model" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Software" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Hardware" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Provider" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="StatusID" Nullable="false" />
+    <Property Type="DateTime" Name="AcquiredOn" />
+    <Property Type="DateTime" Name="RetiredOn" />
+    <Property Type="Int32" Name="CountryID" Nullable="false" />
+    <Property Type="String" Name="Comment" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LastChecked" />
+    <Property Type="String" Name="Photo" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DeviceTypeID" />
+    <Property Type="String" Name="NextGenID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AdditionalAttributeValues" Relationship="IOTAModel.FK_DevicesToAdditionalAttributes_Devices" FromRole="Device" ToRole="AdditionalAttributeValue" />
+    <NavigationProperty Name="Brand" Relationship="IOTAModel.FK_Devices_Brands" FromRole="Device" ToRole="Brand" />
+    <NavigationProperty Name="Country" Relationship="IOTAModel.FK_Devices_Countries" FromRole="Device" ToRole="Country" />
+    <NavigationProperty Name="CWIRanges" Relationship="IOTAModel.FK_VINs_Devices" FromRole="Device" ToRole="CWIRange" />
+    <NavigationProperty Name="DeviceType" Relationship="IOTAModel.FK_Devices_DeviceTypes" FromRole="Device" ToRole="DeviceType" />
+    <NavigationProperty Name="DeviceStatus" Relationship="IOTAModel.FK_Devices_Statuses" FromRole="Device" ToRole="DeviceStatus" />
+    <NavigationProperty Name="Brands" Relationship="IOTAModel.CustomerBrandsToDevices" FromRole="Device" ToRole="Brand" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Username" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Comment" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Active" Nullable="false" />
+    <Property Type="Int32" Name="CountryID" Nullable="false" />
+    <Property Type="Int32" Name="CustomerID" />
+    <Property Type="Boolean" Name="CreateComments" Nullable="false" />
+    <Property Type="Boolean" Name="AllCustomers" Nullable="false" />
+    <Property Type="Boolean" Name="AllRegions" Nullable="false" />
+    <Property Type="Int32" Name="ContactID" />
+    <NavigationProperty Name="Contact" Relationship="IOTAModel.FK_Users_Contacts" FromRole="User" ToRole="Contact" />
+    <NavigationProperty Name="Cultures" Relationship="IOTAModel.UsersToCultures" FromRole="User" ToRole="Culture" />
+    <NavigationProperty Name="Brands" Relationship="IOTAModel.UsersToCustomerBrands" FromRole="User" ToRole="Brand" />
+    <NavigationProperty Name="Regions" Relationship="IOTAModel.UsersToRegions" FromRole="User" ToRole="Region" />
+    <NavigationProperty Name="UICategories" Relationship="IOTAModel.UsersToUICategories" FromRole="User" ToRole="UICategory" />
+  </EntityType>
+  <Association Name="FK_Accessory_Brands">
+    <End Type="IOTAModel.Brand" Role="Brand" Multiplicity="1" />
+    <End Type="IOTAModel.Accessory" Role="Accessory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Accessory">
+        <PropertyRef Name="BrandID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DevicesToAdditionalAttributes_Devices">
+    <End Type="IOTAModel.Device" Role="Device" Multiplicity="1" />
+    <End Type="IOTAModel.AdditionalAttributeValue" Role="AdditionalAttributeValue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Device">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AdditionalAttributeValue">
+        <PropertyRef Name="DeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Devices_Brands">
+    <End Type="IOTAModel.Brand" Role="Brand" Multiplicity="1" />
+    <End Type="IOTAModel.Device" Role="Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Device">
+        <PropertyRef Name="BrandID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vehicle_Brands">
+    <End Type="IOTAModel.Brand" Role="Brand" Multiplicity="1" />
+    <End Type="IOTAModel.Vehicle" Role="Vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Vehicle">
+        <PropertyRef Name="BrandID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Contacts">
+    <End Type="IOTAModel.Contact" Role="Contact" Multiplicity="0..1" />
+    <End Type="IOTAModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contact">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="ContactID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Devices_Countries">
+    <End Type="IOTAModel.Country" Role="Country" Multiplicity="1" />
+    <End Type="IOTAModel.Device" Role="Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Device">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VINs_Devices">
+    <End Type="IOTAModel.Device" Role="Device" Multiplicity="0..1" />
+    <End Type="IOTAModel.CWIRange" Role="CWIRange" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Device">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CWIRange">
+        <PropertyRef Name="DeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Devices_DeviceTypes">
+    <End Type="IOTAModel.DeviceType" Role="DeviceType" Multiplicity="0..1" />
+    <End Type="IOTAModel.Device" Role="Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeviceType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Device">
+        <PropertyRef Name="DeviceTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Devices_Statuses">
+    <End Type="IOTAModel.DeviceStatus" Role="DeviceStatus" Multiplicity="1" />
+    <End Type="IOTAModel.Device" Role="Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeviceStatus">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Device">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CustomerBrandsToDevices">
+    <End Type="IOTAModel.Brand" Role="Brand" Multiplicity="*" />
+    <End Type="IOTAModel.Device" Role="Device" Multiplicity="*" />
+  </Association>
+  <Association Name="CustomerBrandsToRegions">
+    <End Type="IOTAModel.Brand" Role="Brand" Multiplicity="*" />
+    <End Type="IOTAModel.Region" Role="Region" Multiplicity="*" />
+  </Association>
+  <Association Name="CustomersToAddresses">
+    <End Type="IOTAModel.Address" Role="Address" Multiplicity="*" />
+    <End Type="IOTAModel.Customer" Role="Customer" Multiplicity="*" />
+  </Association>
+  <Association Name="CustomersToBrands">
+    <End Type="IOTAModel.Brand" Role="Brand" Multiplicity="*" />
+    <End Type="IOTAModel.Customer" Role="Customer" Multiplicity="*" />
+  </Association>
+  <Association Name="CustomersToContacts">
+    <End Type="IOTAModel.Contact" Role="Contact" Multiplicity="*" />
+    <End Type="IOTAModel.Customer" Role="Customer" Multiplicity="*" />
+  </Association>
+  <Association Name="UsersToCultures">
+    <End Type="IOTAModel.Culture" Role="Culture" Multiplicity="*" />
+    <End Type="IOTAModel.User" Role="User" Multiplicity="*" />
+  </Association>
+  <Association Name="UsersToCustomerBrands">
+    <End Type="IOTAModel.Brand" Role="Brand" Multiplicity="*" />
+    <End Type="IOTAModel.User" Role="User" Multiplicity="*" />
+  </Association>
+  <Association Name="UsersToRegions">
+    <End Type="IOTAModel.Region" Role="Region" Multiplicity="*" />
+    <End Type="IOTAModel.User" Role="User" Multiplicity="*" />
+  </Association>
+  <Association Name="UsersToUICategories">
+    <End Type="IOTAModel.UICategory" Role="UICategory" Multiplicity="*" />
+    <End Type="IOTAModel.User" Role="User" Multiplicity="*" />
+  </Association>
+  <EntityType Name="QuickGuide">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Boolean" Name="Discoverable" Nullable="false" />
+    <NavigationProperty Name="QuickGuideSteps" Relationship="IOTAModel.FK_QuickGuideSteps_QuickGuides" FromRole="QuickGuide" ToRole="QuickGuideStep" />
+  </EntityType>
+  <EntityType Name="QuickGuideSection">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Section" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="SectionNumber" Nullable="false" />
+    <NavigationProperty Name="QuickGuideSteps" Relationship="IOTAModel.FK_QuickGuideSteps_QuickGuideSections" FromRole="QuickGuideSection" ToRole="QuickGuideStep" />
+  </EntityType>
+  <EntityType Name="QuickGuideStep">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="QuickGuideID" />
+    <Property Type="Int32" Name="QuickGuideSectionID" Nullable="false" />
+    <Property Type="Int32" Name="QuickGuideTextID" Nullable="false" />
+    <Property Type="Int32" Name="Step" Nullable="false" />
+    <Property Type="Int32" Name="Grouping" Nullable="false" />
+    <NavigationProperty Name="QuickGuide" Relationship="IOTAModel.FK_QuickGuideSteps_QuickGuides" FromRole="QuickGuideStep" ToRole="QuickGuide" />
+    <NavigationProperty Name="QuickGuideSection" Relationship="IOTAModel.FK_QuickGuideSteps_QuickGuideSections" FromRole="QuickGuideStep" ToRole="QuickGuideSection" />
+    <NavigationProperty Name="QuickGuideText" Relationship="IOTAModel.FK_QuickGuideSteps_QuickGuideText" FromRole="QuickGuideStep" ToRole="QuickGuideText" />
+  </EntityType>
+  <EntityType Name="QuickGuideText">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <NavigationProperty Name="QuickGuideSteps" Relationship="IOTAModel.FK_QuickGuideSteps_QuickGuideText" FromRole="QuickGuideText" ToRole="QuickGuideStep" />
+    <NavigationProperty Name="QuickGuideTextCultureDetails" Relationship="IOTAModel.FK_QuickGuideTextCultureDetails_QuickGuideText" FromRole="QuickGuideText" ToRole="QuickGuideTextCultureDetail" />
+  </EntityType>
+  <EntityType Name="QuickGuideTextCultureDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="QuickGuideTextID" Nullable="false" />
+    <Property Type="Int32" Name="CultureID" Nullable="false" />
+    <Property Type="String" Name="QuickGuideText" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Culture" Relationship="IOTAModel.FK_QuickGuideTextCultureDetails_Cultures" FromRole="QuickGuideTextCultureDetail" ToRole="Culture" />
+    <NavigationProperty Name="QuickGuideText1" Relationship="IOTAModel.FK_QuickGuideTextCultureDetails_QuickGuideText" FromRole="QuickGuideTextCultureDetail" ToRole="QuickGuideText" />
+  </EntityType>
+  <EntityType Name="TopFeatureCultureDetail">
+    <Key>
+      <PropertyRef Name="TopFeatureID" />
+      <PropertyRef Name="CultureID" />
+    </Key>
+    <Property Type="Int32" Name="TopFeatureID" Nullable="false" />
+    <Property Type="Int32" Name="CultureID" Nullable="false" />
+    <Property Type="String" Name="TopFeature" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Culture" Relationship="IOTAModel.FK_TopFeatureCultureDetails_Cultures" FromRole="TopFeatureCultureDetail" ToRole="Culture" />
+    <NavigationProperty Name="TopFeature1" Relationship="IOTAModel.FK_TopFeatureCultureDetails_TopFeatures" FromRole="TopFeatureCultureDetail" ToRole="TopFeature" />
+  </EntityType>
+  <EntityType Name="TopFeature">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Name" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TopFeatureCultureDetails" Relationship="IOTAModel.FK_TopFeatureCultureDetails_TopFeatures" FromRole="TopFeature" ToRole="TopFeatureCultureDetail" />
+  </EntityType>
+  <Association Name="FK_QuickGuideTextCultureDetails_Cultures">
+    <End Type="IOTAModel.Culture" Role="Culture" Multiplicity="1" />
+    <End Type="IOTAModel.QuickGuideTextCultureDetail" Role="QuickGuideTextCultureDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Culture">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="QuickGuideTextCultureDetail">
+        <PropertyRef Name="CultureID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TopFeatureCultureDetails_Cultures">
+    <End Type="IOTAModel.Culture" Role="Culture" Multiplicity="1" />
+    <End Type="IOTAModel.TopFeatureCultureDetail" Role="TopFeatureCultureDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Culture">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TopFeatureCultureDetail">
+        <PropertyRef Name="CultureID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QuickGuideSteps_QuickGuides">
+    <End Type="IOTAModel.QuickGuide" Role="QuickGuide" Multiplicity="0..1" />
+    <End Type="IOTAModel.QuickGuideStep" Role="QuickGuideStep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QuickGuide">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="QuickGuideStep">
+        <PropertyRef Name="QuickGuideID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QuickGuideSteps_QuickGuideSections">
+    <End Type="IOTAModel.QuickGuideSection" Role="QuickGuideSection" Multiplicity="1" />
+    <End Type="IOTAModel.QuickGuideStep" Role="QuickGuideStep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QuickGuideSection">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="QuickGuideStep">
+        <PropertyRef Name="QuickGuideSectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QuickGuideSteps_QuickGuideText">
+    <End Type="IOTAModel.QuickGuideText" Role="QuickGuideText" Multiplicity="1" />
+    <End Type="IOTAModel.QuickGuideStep" Role="QuickGuideStep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QuickGuideText">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="QuickGuideStep">
+        <PropertyRef Name="QuickGuideTextID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QuickGuideTextCultureDetails_QuickGuideText">
+    <End Type="IOTAModel.QuickGuideText" Role="QuickGuideText" Multiplicity="1" />
+    <End Type="IOTAModel.QuickGuideTextCultureDetail" Role="QuickGuideTextCultureDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QuickGuideText">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="QuickGuideTextCultureDetail">
+        <PropertyRef Name="QuickGuideTextID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TopFeatureCultureDetails_TopFeatures">
+    <End Type="IOTAModel.TopFeature" Role="TopFeature" Multiplicity="1" />
+    <End Type="IOTAModel.TopFeatureCultureDetail" Role="TopFeatureCultureDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TopFeature">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TopFeatureCultureDetail">
+        <PropertyRef Name="TopFeatureID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CWIText">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <NavigationProperty Name="CWITextCultureDetails" Relationship="IOTAModel.FK_CWITextCultureDetails_CWIText" FromRole="CWIText" ToRole="CWITextCultureDetail" />
+    <NavigationProperty Name="Brands" Relationship="IOTAModel.BrandsToCwiText" FromRole="CWIText" ToRole="Brand" />
+  </EntityType>
+  <EntityType Name="CWITextCultureDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="CwiTextID" Nullable="false" />
+    <Property Type="Int32" Name="CultureID" Nullable="false" />
+    <Property Type="String" Name="CwiText" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Culture" Relationship="IOTAModel.FK_CWITextCultureDetails_Cultures" FromRole="CWITextCultureDetail" ToRole="Culture" />
+    <NavigationProperty Name="CWIText1" Relationship="IOTAModel.FK_CWITextCultureDetails_CWIText" FromRole="CWITextCultureDetail" ToRole="CWIText" />
+  </EntityType>
+  <Association Name="FK_CWITextCultureDetails_Cultures">
+    <End Type="IOTAModel.Culture" Role="Culture" Multiplicity="1" />
+    <End Type="IOTAModel.CWITextCultureDetail" Role="CWITextCultureDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Culture">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CWITextCultureDetail">
+        <PropertyRef Name="CultureID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CWITextCultureDetails_CWIText">
+    <End Type="IOTAModel.CWIText" Role="CWIText" Multiplicity="1" />
+    <End Type="IOTAModel.CWITextCultureDetail" Role="CWITextCultureDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CWIText">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CWITextCultureDetail">
+        <PropertyRef Name="CwiTextID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BrandsToCwiText">
+    <End Type="IOTAModel.Brand" Role="Brand" Multiplicity="*" />
+    <End Type="IOTAModel.CWIText" Role="CWIText" Multiplicity="*" />
+  </Association>
+</Schema>

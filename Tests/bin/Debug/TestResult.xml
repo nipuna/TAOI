@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="D:\PROJECTS\WEB PROJECTS\NextGen_IOTA\Tests\bin\Debug\Tests.dll" total="5" errors="0" failures="0" not-run="3" inconclusive="0" ignored="0" skipped="0" invalid="3" date="2009-12-02" time="15:39:35">
+  <environment nunit-version="2.5.2.9222" clr-version="4.0.21006.1" os-version="Microsoft Windows NT 6.0.6000.0" platform="Win32NT" cwd="C:\Program Files\NUnit 2.5.2\bin\net-2.0" machine-name="SHOBHIT-PC" user="Administrator" user-domain="SHOBHIT-PC" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite name="D:\PROJECTS\WEB PROJECTS\NextGen_IOTA\Tests\bin\Debug\Tests.dll" executed="True" success="True" time="0.057" asserts="0">
+    <results>
+      <test-suite name="Tests" executed="True" success="True" time="0.057" asserts="0">
+        <results>
+          <test-suite name="AdminTests" executed="True" success="False" time="0.018" asserts="0">
+            <results>
+              <test-suite name="BrandsControllerTests" executed="True" success="False" time="0.009" asserts="0">
+                <results>
+                  <test-case name="Tests.AdminTests.BrandsControllerTests.List_Presents_Correct_Page_Of_Brands" executed="False">
+                    <reason>
+                      <message><![CDATA[No arguments were provided]]></message>
+                    </reason>
+                  </test-case>
+                  <test-case name="Tests.AdminTests.BrandsControllerTests.To_Check_Brands_Delete" executed="False">
+                    <reason>
+                      <message><![CDATA[No arguments were provided]]></message>
+                    </reason>
+                  </test-case>
+                  <test-case name="Tests.AdminTests.BrandsControllerTests.To_Check_Brands_Edit" executed="False">
+                    <reason>
+                      <message><![CDATA[No arguments were provided]]></message>
+                    </reason>
+                  </test-case>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+          <test-suite name="Routing" executed="True" success="True" time="0.033" asserts="0">
+            <results>
+              <test-suite name="InboundRoutingTests" executed="True" success="True" time="0.005" asserts="0">
+                <results>
+                  <test-case name="Tests.Routing.InboundRoutingTests.Slash_Goes_To_Home_Dashboard" executed="True" success="True" time="0.002" asserts="3" />
+                  <test-case name="Tests.Routing.InboundRoutingTests.Testing_Define_Goes_To_Testing_Define" executed="True" success="True" time="0.001" asserts="3" />
+                </results>
+              </test-suite>
+              <test-suite name="OutboundRoutingTests" executed="True" success="True" time="0.013" asserts="0">
+                <results>
+                  <test-case name="Tests.Routing.OutboundRoutingTests.Anything_Controller_Else_Action_Is_At_Anything_Slash_Else" executed="True" success="True" time="0.002" asserts="1" />
+                  <test-case name="Tests.Routing.OutboundRoutingTests.Home_Dashboard_Is_At_Slash" executed="True" success="True" time="0.001" asserts="1" />
+                  <test-case name="Tests.Routing.OutboundRoutingTests.Testing_Define_Is_At_Slash_Testing_Define" executed="True" success="True" time="0.001" asserts="1" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

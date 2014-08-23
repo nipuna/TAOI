@@ -1,0 +1,47 @@
+﻿
+.boxbg{
+	height:190px;
+	background-color:#D9F3FF;
+	margin-top:5px;
+	}
+	
+.boxbgheading{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:20px;
+	background-color:#89B7DA;
+	text-align:left;
+	padding:0px 0px 0px 0px;
+	font-weight:bold;
+	height:28px;
+	color:#ffffff;
+	margin-top:15px;
+}
+.edittext{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#000;
+	text-align:right;
+	font-weight:bold;
+	padding:5px 0;
+	margin-top:10px;
+}
+.inputB{
+	border:2px solid #000000;
+	height:18px;
+	width:100%;
+}
+
+.brandinputarea{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#000;
+	background-color:#ffffff;
+	border:1px solid #000;
+	height:25px;
+	width:150px;
+	float:left;
+	margin: 10px 6px 4px 0px;
+	-moz-border-radius:2px;
+    -webkit-border-radius:4px;
+}
+

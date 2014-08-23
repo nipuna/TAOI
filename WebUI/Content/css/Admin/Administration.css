@@ -1,0 +1,43 @@
+﻿
+#loginboxbg{
+	height:180px;
+	background-color:#EDF3F8;
+    -moz-border-radius:8px;
+    -webkit-border-radius:10px;
+    border: 2px solid #125294;
+    margin-top:18px;
+    padding-top:10px;
+    color:#00458c;
+    font-weight:bolder;
+    font-size:medium;
+}
+
+table
+{
+    padding: 0px 5px 5px 5px; 
+}
+
+tr
+{
+    height:25px;
+    vertical-align:middle;
+}
+
+DIV.Message { background: gray; color:White; padding: .2em; margin-top:.25em; font-size:medium; }
+
+checkbox
+{
+	color:#FFFFFF;
+	float:left;
+	border-width: 5px;
+    border-style:solid;
+    border:#00458c;
+    margin:5px 5px 5px 5px;
+}
+
+.validations
+{
+  color:#FF0000;
+  font-size:10px;
+  font-weight:bolder;   
+}
